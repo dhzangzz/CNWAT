@@ -33,7 +33,6 @@ $volume = 4/3 * M_PI * $r * $r * $r;   // V = 4/3 πr³
 </div>
 
 <div class="card">
-    <h3>“Hello” chuyển động</h3>
     <div class="hello-track">
         <span class="hello">Hello 👋</span>
     </div>
