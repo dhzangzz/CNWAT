@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <div class="card">
-    <h2>7.2 • Register</h2>
+    <h2>Đăng ký</h2>
     <?php if ($msg): ?>
         <div style="margin:8px 0 12px;color:#b42318;background:#fee4e2;border:1px solid #fda29b;padding:8px 10px;border-radius:8px">
         <?= htmlspecialchars($msg) ?>
@@ -36,16 +36,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <form method="post" action="">
-        <label>Họ tên
-        <input name="fullname" required value="<?= htmlspecialchars($fullname) ?>">
+        <label>Họ tên: 
+        <input type="text" name="fullname" required value="<?= htmlspecialchars($fullname) ?>">
         </label>
 
-        <label>Email
+        <label>Email:
         <input type="email" name="email" required value="<?= htmlspecialchars($email) ?>">
         </label>
 
         <fieldset style="border:0;padding:0;margin:10px 0">
-        <legend>Giới tính</legend>
+        <legend>Giới tính:</legend>
         <label><input type="radio" name="gender" value="Nữ"   <?= $gender==='Nữ'?'checked':'' ?>> Nữ</label>
         <label><input type="radio" name="gender" value="Nam"  <?= $gender==='Nam'?'checked':'' ?>> Nam</label>
         <label><input type="radio" name="gender" value="Khác" <?= $gender==='Khác'?'checked':'' ?>> Khác</label>
@@ -56,18 +56,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <option value="">-- Chọn --</option>
             <option <?= $major==='ATTT'?'selected':'' ?> value="ATTT">An toàn thông tin</option>
             <option <?= $major==='CNTT'?'selected':'' ?> value="CNTT">Công nghệ thông tin</option>
-            <option <?= $major==='DT'?'selected':''   ?> value="DT">Điện tử</option>
+            <option <?= $major==='DTVT'?'selected':'' ?> value="DTVT">Điện tử viễn thông</option>
         </select>
         </label>
 
-        <button type="submit">Gửi đăng ký</button>
+        <button type="submit">Đăng ký</button>
     </form>
     </div>
 
 <style>
     .card form label{display:block;margin:10px 0}
     .card input[type="text"], .card input[type="email"], .card select{
-    width:100%;padding:10px;border:1px solid #ddd;border-radius:8px
+    width:90%;padding:10px;border:1px solid #ddd;border-radius:8px
     }
     .card button{margin-top:8px;padding:10px 12px;border:0;border-radius:10px;cursor:pointer}
     .card fieldset label{margin-right:12px}

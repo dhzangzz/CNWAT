@@ -6,7 +6,7 @@ $major    = $_POST['major']    ?? '';
 $ok = $fullname && $email && $gender && $major;
 ?>
 <div class="card">
-    <h2>7.2 • ResultRegister</h2>
+    <h2>ResultRegister</h2>
     <?php if (!$ok): ?>
         <p>Thiếu dữ liệu. Quay lại <a href="/dauhuonggiang/th4/7.2/?page=Register">Register</a>.</p>
     <?php else: ?>
