@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hồ sơ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/7.4/style74.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small active" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+            <main class="content">
+                <header>
+                    <h1>Form hồ sơ</h1>
+                </header>
+
+                <form id="frm-hoso" class="f74" novalidate>
+                    <div class="row">
+                        <div class="col">
+                            <div class="fg">
+                                <label for="mahs">Mã học sinh:</label>
+                                <input type="text" id="mahs" name="mahs" maxlength="8" required
+                                    placeholder="VD: HS240001" aria-describedby="err-mahs hint-mahs">
+                                <div class="hint" id="hint-mahs">Bắt buộc, 8 ký tự.
+                                </div>
+                                <div class="err" id="err-mahs"></div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="fg">
+                                <label for="hoten">Họ tên:</label>
+                                <input type="text" id="hoten" name="hoten" maxlength="50" required
+                                    placeholder="VD: Nguyễn Văn B" aria-describedby="err-hoten">
+                                <div class="err" id="err-hoten"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="fg">
+                                <label for="ngaysinh">Ngày sinh:</label>
+                                <input type="date" id="ngaysinh" name="ngaysinh" required
+                                    aria-describedby="err-ngaysinh hint-ngaysinh">
+                                <div class="hint" id="hint-ngaysinh">Không vượt quá ngày hiện tại.</div>
+                                <div class="err" id="err-ngaysinh"></div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="fg">
+                                <label for="lop">Lớp:</label>
+                                <input type="text" id="lop" name="lop" maxlength="6" required placeholder="VD: AT1901"
+                                    aria-describedby="err-lop hint-lop">
+                                <div class="hint" id="hint-lop">Bắt buộc, 6 ký tự.</div>
+                                <div class="err" id="err-lop"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fg">
+                        <label for="diachi">Địa chỉ:</label>
+                        <textarea id="diachi" name="diachi" maxlength="150" required
+                            placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"
+                            aria-describedby="err-diachi"></textarea>
+                        <div class="err" id="err-diachi"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="fg">
+                                <label for="diemtoan">Điểm Toán:</label>
+                                <input type="number" id="diemtoan" name="diemtoan" step="0.01" inputmode="decimal"
+                                    required placeholder="0–10" aria-describedby="err-diemtoan hint-diem">
+                                <div class="err" id="err-diemtoan"></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fg">
+                                <label for="diemly">Điểm Lý:</label>
+                                <input type="number" id="diemly" name="diemly" step="0.01" inputmode="decimal" required
+                                    placeholder="0–10" aria-describedby="err-diemly hint-diem">
+                                <div class="err" id="err-diemly"></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fg">
+                                <label for="diemhoa">Điểm Hóa</label>
+                                <input type="number" id="diemhoa" name="diemhoa" step="0.01" inputmode="decimal"
+                                    required placeholder="0–10" aria-describedby="err-diemhoa hint-diem">
+                                <div class="err" id="err-diemhoa"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hint" id="hint-diem">Chấp nhận điểm lẻ.</div>
+
+                    <div class="actions">
+                        <button type="submit" class="primary">Lưu</button>
+                        <button type="reset">Xóa</button>
+                    </div>
+
+                    <div class="preview" id="preview" hidden>
+                        <strong>Dữ liệu hợp lệ:</strong>
+                        <div id="preview-body"></div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <script src="/dauhuonggiang/th3/th3.js" defer></script>
+    <script src="/dauhuonggiang/th3/7.4/hso.js" defer></script>
+    
+</body>
+
+</html>

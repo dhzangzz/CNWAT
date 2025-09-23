@@ -1,0 +1,147 @@
+/* ======== khung tổng ======== */
+.th-shell .card+.card {
+    margin-top: 16px;
+}
+
+.th-sidebar .vnav a.small {
+    font-size: 14px;
+}
+
+/* ======== 7.6: Danh sách ======== */
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl th,
+.tbl td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.tbl thead tr {
+    background: #333;
+    color: #fff;
+}
+
+.tbl tbody tr:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.tbl tbody tr:nth-child(even) {
+    background: #e6f2ff;
+}
+
+.tbl tbody tr:hover {
+    background: #90ee90;
+    cursor: pointer;
+}
+
+.tbl .selected {
+    background: yellow !important;
+}
+
+/* ======== 7.7: Thực đơn ======== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px;
+    margin-bottom: 6px;
+    background: #eee;
+    cursor: pointer;
+    transition: background .2s;
+    border-radius: 8px;
+}
+
+.menu li:hover {
+    background: #bde2eb;
+}
+
+.menu li.selected {
+    background: #367fdf;
+    color: #fff;
+    font-weight: 700;
+}
+
+.display-area {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+}
+
+/*Tab*/
+.tab-container {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 10px 16px;
+    cursor: pointer;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background .2s;
+}
+
+.tab:hover:not(.active) {
+    background: #e0e0e0;
+}
+
+.tab.active {
+    background: #00bcd4;
+    color: #fff;
+    font-weight: 700;
+}
+
+.tab-content {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 10px;
+}
+/* Form nhập*/
+.req {
+    background: #e6f7ff;
+}
+
+/* ô bắt buộc nhập */
+.err {
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+/*báo lỗi */
+.hint {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.link-card.active {
+    background: #fff7e0;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px #fff7e0 inset;
+}
+
+.topbar a:focus-visible,
+.vnav a:focus-visible,
+.link-card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 10px;
+}

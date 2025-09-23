@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell th-shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small active" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+
+            </aside>
+
+            <main class="content">
+                <div class="card">
+                    <h2>Tabs</h2>
+                    <div class="tab-container">
+                        <div class="tab active" data-tab="tab1">Tab 1</div>
+                        <div class="tab" data-tab="tab2">Tab 2</div>
+                        <div class="tab" data-tab="tab3">Tab 3</div>
+                        <div class="tab" data-tab="tab4">Tab 4</div>
+                    </div>
+
+                    <div class="tab-content" id="tab1">Nội dung của Tab 1</div>
+                    <div class="tab-content" id="tab2" style="display:none;">Nội dung của Tab 2</div>
+                    <div class="tab-content" id="tab3" style="display:none;">Nội dung của Tab 3</div>
+                    <div class="tab-content" id="tab4" style="display:none;">Nội dung của Tab 4</div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.style.display = 'none');
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).style.display = 'block';
+            });
+        });
+        
+    </script>
+    <script src="/dauhuonggiang/th3/th3.js?v=5" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Thực đơn</title>
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell th-shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small active" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+
+            </aside>
+
+            <main class="content">
+                <div class="card">
+                    <h2>Thực đơn</h2>
+                    <div class="menu-grid">
+                        <div class="menu">
+                            <ul>
+                                <li data-title="Quản lý cán bộ (Đăng ký thông tin)">» Quản lý cán bộ (Đăng ký thông tin)
+                                </li>
+                                <li data-title="Phân quyền">» Phân quyền</li>
+                                <li data-title="Cổng thông tin đào tạo và người học">» Cổng thông tin đào tạo và người
+                                    học</li>
+                                <li data-title="Quản lý văn bản & hồ sơ công việc">» Quản lý văn bản & hồ sơ công việc
+                                </li>
+                                <li data-title="Hành chính công">» Hành chính công</li>
+                                <li data-title="Hệ thống thông tin báo cáo">» Hệ thống thông tin báo cáo</li>
+                            </ul>
+                        </div>
+                        <div class="display-area">
+                            <h3 id="menu-title">» Vui lòng chọn một tác vụ</h3>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <script>
+        const items = document.querySelectorAll('.menu li');
+        const title = document.getElementById('menu-title');
+        items.forEach(li => {
+            li.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('selected'));
+                li.classList.add('selected');
+                title.textContent = '» ' + li.getAttribute('data-title');
+            });
+        });
+    </script>
+    <script src="/dauhuonggiang/th3/th3.js?v=5" defer></script>
+</body>
+
+</html>

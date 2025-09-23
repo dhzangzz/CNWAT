@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>7.5 – Form nhập</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/7.5/style75.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small active" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="card form">
+                    <h2>Form đăng ký thành viên</h2>
+                    <form id="regForm" novalidate>
+                        <div class="row">
+                            <label for="fullName">Họ và tên *</label>
+                            <div class="ctrl">
+                                <input id="fullName" class="required" type="text" placeholder="VD: Đậu Hương Giang"
+                                    autocomplete="name">
+                                <span class="err" id="eName"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="address">Địa chỉ</label>
+                            <div class="ctrl">
+                                <input id="address" type="text" placeholder="Số nhà, đường, phường...">
+                                <span class="err"></span>
+                            </div>
+                        </div> 
+                        
+                        <div class="row">
+                            <label>Giới tính *</label>
+                            <div class="ctrl radio required" role="group" aria-label="Giới tính">
+                                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                                <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                                <span class="err" id="eGender"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="email">Email *</label>
+                            <div class="ctrl">
+                                <input id="email" class="required" type="email" placeholder="ten@domain.com">
+                                <span class="err" id="eEmail"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="dob">Ngày sinh *</label>
+                            <div class="ctrl">
+                                <input id="dob" class="required ghost" type="text" maxlength="10" inputmode="numeric"
+                                    value="nn/tt/nnnn">
+                                <span class="err" id="eDob"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="phone">Điện thoại *</label>
+                            <div class="ctrl">
+                                <input id="phone" class="required" type="text" inputmode="tel" placeholder="09xxxxxxxx">
+                                <span class="err" id="ePhone"></span>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="row">
+                            <label>Khóa đăng ký</label>
+                            <div class="ctrl checks" role="group" aria-label="Ngành học">
+                                <label><input type="checkbox" name="majors" value="Tiếng Anh"> Tiếng Anh</label>
+                                <label><input type="checkbox" name="majors" value="Quản trị"> Quản trị</label>
+                                <label><input type="checkbox" name="majors" value="CNTT"> CNTT</label>
+                                <span class="err"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="pwd">Mật khẩu *</label>
+                            <div class="ctrl">
+                                <input id="pwd" class="required" type="password" minlength="6" placeholder="≥ 6 ký tự">
+                                <span class="err" id="ePwd"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="pwd2">Gõ lại mật khẩu *</label>
+                            <div class="ctrl">
+                                <input id="pwd2" class="required" type="password" minlength="6"
+                                    placeholder="Nhập lại giống ô trên">
+                                <span class="err" id="ePwd2"></span>
+                            </div>
+                        </div>
+
+                        <div class="actions">
+                            <button type="button" class="btn" id="btn-ok">Chấp nhận</button>
+                            <button type="reset" class="btn">Bỏ qua</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <!-- JS -->
+    <script src="/dauhuonggiang/th3/th3.js?v=5" defer></script>
+    <script src="/dauhuonggiang/th3/7.5/form.js?v=2" defer></script>
+</body>
+
+</html>

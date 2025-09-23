@@ -1,0 +1,80 @@
+.f79 {
+    max-width: 720px;
+}
+
+.f79 .row {
+    display: flex;
+    gap: 12px;
+}
+
+.f79 .row>.col {
+    flex: 1;
+}
+
+.f79 .fg {
+    margin: 10px 0;
+}
+
+.f79 label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.f79 input[type="text"],
+.f79 input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.f79 input.is-invalid {
+    border-color: #e53935;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, .15);
+}
+
+.f79 .hint {
+    font-size: .9rem;
+    color: #666;
+}
+
+.f79 .err {
+    font-size: .9rem;
+    color: #e53935;
+    min-height: 1.1em;
+    margin-top: 2px;
+}
+
+.f79 .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.f79 .actions button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.f79 .actions .primary {
+    background: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+}
+
+.f79 .preview {
+    margin-top: 16px;
+    border: 1px dashed #bbb;
+    padding: 10px;
+    background: #fafafa;
+}
+
+@media (max-width:720px) {
+    .f79 .row {
+        flex-direction: column;
+    }
+}

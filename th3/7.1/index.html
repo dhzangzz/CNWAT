@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>7.1 – Ví dụ JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <style>
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px
+        }
+
+        .link-card {
+            display: block;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            text-decoration: none;
+            color: #111;
+            background: #fff
+        }
+
+        .link-card:hover {
+            background: #f7f7f7;
+            border-color: #d1d5db
+        }
+
+        .link-card h3 {
+            margin: 0 0 6px;
+            font-size: 16px
+        }
+
+        .link-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+                <nav class="vnav">
+                    <a class="small active" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="card">
+                    <h2>Mục lục ví dụ</h2>
+                    <div class="links-grid" style="margin-top:12px">
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/bien.html">
+                            <h3>• Biến</h3>
+                            <p>Khai báo & tính nhanh.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/textbox.html">
+                            <h3>• Textbox</h3>
+                            <p>Lấy giá trị input.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/if.html">
+                            <h3>• If/Else</h3>
+                            <p>Điểm ≥ 5 ⇒ Đậu.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/date.html">
+                            <h3>• Ngày tháng</h3>
+                            <p>Hiện giờ & thứ.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/switch.html">
+                            <h3>• Switch</h3>
+                            <p>1–7 → thứ.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/confirm.html">
+                            <h3>• confirm()</h3>
+                            <p>Chọn Đồng ý/Huỷ.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/prompt.html">
+                            <h3>• prompt()</h3>
+                            <p>Nhập tên & chào.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/string.html">
+                            <h3>• String</h3>
+                            <p>length/slice/indexOf.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/array.html">
+                            <h3>• Array</h3>
+                            <p>push/pop/join.</p>
+                        </a>
+                        <a class="link-card" href="/dauhuonggiang/th3/7.1/time.html">
+                            <h3>• Thời gian</h3>
+                            <p>setTimeout/Interval.</p>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+    <script src="/dauhuonggiang/th3/th3.js" defer></script>
+</body>
+
+</html>

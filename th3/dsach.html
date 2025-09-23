@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Danh sách</title>
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell th-shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small active" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="card">
+                    <h2>Danh sách nhân sự</h2>
+                    <table class="tbl" id="employeeTable">
+                        <thead>
+                            <tr>
+                                <th style="width:40px"><input id="selectAll" type="checkbox"></th>
+                                <th>Họ tên</th>
+                                <th>Chức vụ</th>
+                                <th>Phòng ban</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td>Nguyễn An</td>
+                                <td>Nhân viên</td>
+                                <td>Hành chính</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td>Trần Bình</td>
+                                <td>Trưởng nhóm</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td>Lê Chi</td>
+                                <td>Thực tập</td>
+                                <td>IT</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td>Phạm Dương</td>
+                                <td>Trưởng phòng</td>
+                                <td>Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <script>
+        const table = document.getElementById('employeeTable');
+        const selectAll = document.getElementById('selectAll');
+        const rows = Array.from(table.tBodies[0].rows);
+        const checkboxes = rows.map(r => r.querySelector('.row-checkbox'));
+
+        //chọn/bỏ chọn all
+        selectAll.addEventListener('change', function () {
+            checkboxes.forEach((cb, i) => { cb.checked = this.checked; updateRow(rows[i], cb.checked); });
+        });
+        //checked: thuộc tính boolean dành cho input type checkbox
+        //chọn 1 box
+        checkboxes.forEach((cb, i) => {
+            cb.addEventListener('change', () => {
+                updateRow(rows[i], cb.checked);
+                updateSelectAll();//đồng bộ ô selected all
+            });
+        });
+
+        //click vào dòng = toggle checkbox
+        rows.forEach((row, i) => {
+            row.addEventListener('click', (e) => {
+                if (e.target.tagName.toLowerCase() === 'input') return;//nếu click vào input
+                checkboxes[i].checked = !checkboxes[i].checked;//lật trạng thái
+                updateRow(row, checkboxes[i].checked);
+                updateSelectAll();
+            });
+        });
+
+        function updateRow(row, checked) {
+            row.classList.toggle('selected', checked);
+        }
+        function updateSelectAll() {
+            selectAll.checked = checkboxes.every(cb => cb.checked);
+        }
+    </script>
+    <script src="/dauhuonggiang/th3/th3.js?v=5" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>7.1 – prompt()</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <style>
+        .btn {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner"><a href="/dauhuonggiang/">Trang chủ</a><a href="/dauhuonggiang/th2/">Thực hành 2</a><a
+                class="active" href="/dauhuonggiang/th3/">Thực hành 3</a><a href="/dauhuonggiang/th4/">Thực hành 4</a><a
+                href="/dauhuonggiang/th5/">Thực hành 5</a><a href="/dauhuonggiang/th6/">Thực hành 6</a></div>
+    </nav>
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card"><img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+                <nav class="vnav">
+                    <a class="small active" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+            <main class="content">
+                <div class="card">
+                    <p class="breadcrumbs"><a href="/dauhuonggiang/th3/7.1/index.html">« Quay về 7.1</a></p>
+                    <h2>prompt()</h2>
+                    <button class="btn" onclick="run()">Nhập tên</button>
+                    <p id="kq"></p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+    <script src="/dauhuonggiang/th3/th3.js" defer></script>
+    <script>
+        function run() {
+            const name = prompt('Bạn tên gì?');
+            document.getElementById('kq').textContent = name ? `Xin chào ${name}!` : 'Bạn chưa nhập tên.';
+        }
+    </script>
+</body>
+
+</html>

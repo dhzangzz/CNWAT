@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form Lớp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/7.3/style73.css">
+</head>
+
+<body>
+    <!-- TOPBAR -->
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small active" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+            <main class="content">
+                <header>
+                    <h1>Thiết kế form nhập liệu cho bảng LỚP</h1>
+                </header>
+
+                <form id="frm-lop" class="f79" novalidate> <!--gán id cho form/tắt ktra mặc định của trình duyệt-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="fg">
+                                <label for="malop">Mã lớp:</label>
+                                <input type="text" id="malop" name="malop" maxlength="6" required
+                                    placeholder="VD: AT1901"
+                                    aria-describedby="err-malop hint-malop"><!--trường bắt buộc/placeholder: gợi ý định dạng-->
+                                <div class="hint" id="hint-malop">Bắt buộc, đúng 6 ký tự chữ/số. Tự chuyển sang in hoa.
+                                    <!--hint luôn hiển thị-->
+                                </div>
+                                <div class="err" id="err-malop"></div> <!--hiển thị thông báo lỗi-->
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fg">
+                                <label for="khoahoc">Khóa học:</label>
+                                <input type="number" id="khoahoc" name="khoahoc" inputmode="numeric"
+                                    placeholder="VD: 48" required
+                                    aria-describedby="err-khoahoc hint-khoahoc"><!--inputmode: bàn phím số-->
+                                <div class="hint" id="hint-khoahoc">Bắt buộc, số nguyên 1–200.</div>
+                                <div class="err" id="err-khoahoc"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fg">
+                        <label for="tenlop">Tên lớp:</label>
+                        <input type="text" id="tenlop" name="tenlop" maxlength="50" required
+                            placeholder="VD: An toàn thông tin K48" aria-describedby="err-tenlop">
+                        <div class="err" id="err-tenlop"></div>
+                    </div>
+
+                    <div class="fg">
+                        <label for="gvcn">GVCN:</label>
+                        <input type="text" id="gvcn" name="gvcn" maxlength="50" required placeholder="VD: Trần Văn A"
+                            aria-describedby="err-gvcn hint-gvcn">
+                        <div class="hint" id="hint-gvcn">Chỉ chữ cái, khoảng trắng, dấu chấm, gạch nối, dấu nháy đơn.
+                        </div>
+                        <div class="err" id="err-gvcn"></div>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="primary">Lưu</button>
+                        <button type="reset">Xóa</button>
+                    </div>
+
+                    <div class="preview" id="preview" hidden>
+                        <strong>Dữ liệu hợp lệ (xem trước):</strong>
+                        <div id="preview-body"></div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <script src="/dauhuonggiang/th3/th3.js" defer></script>
+    <script src="/dauhuonggiang/th3/7.3/formlop.js" defer></script>
+
+</body>
+
+</html>

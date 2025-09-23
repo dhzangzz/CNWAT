@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>7.1 – Switch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <style>
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner"><a href="/dauhuonggiang/">Trang chủ</a><a href="/dauhuonggiang/th2/">Thực hành 2</a><a
+                class="active" href="/dauhuonggiang/th3/">Thực hành 3</a><a href="/dauhuonggiang/th4/">Thực hành 4</a><a
+                href="/dauhuonggiang/th5/">Thực hành 5</a><a href="/dauhuonggiang/th6/">Thực hành 6</a></div>
+    </nav>
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card"><img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+                <nav class="vnav">
+                    <a class="small active" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+            <main class="content">
+                <div class="card">
+                    <p class="breadcrumbs"><a href="/dauhuonggiang/th3/7.1/index.html">« Quay về 7.1</a></p>
+                    <h2>Nhập 1–7 ⇒ Thứ</h2>
+                    <div class="row">
+                        <input id="num" type="number" value="2" min="1" max="7" style="width:120px">
+                        <button class="btn" onclick="mapThu()">Đổi</button>
+                        <strong id="kq"></strong>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+    <script src="/dauhuonggiang/th3/th3.js" defer></script>
+    <script>
+        function mapThu() {
+            const n = +document.getElementById('num').value;
+            let thu;
+            switch (n) {
+                case 1: thu = 'Chủ nhật'; break;
+                case 2: thu = 'Thứ hai'; break;
+                case 3: thu = 'Thứ ba'; break;
+                case 4: thu = 'Thứ tư'; break;
+                case 5: thu = 'Thứ năm'; break;
+                case 6: thu = 'Thứ sáu'; break;
+                case 7: thu = 'Thứ bảy'; break;
+                default: thu = 'Ngoài 1–7';
+            }
+            document.getElementById('kq').textContent = thu;
+        }
+    </script>
+</body>
+
+</html>

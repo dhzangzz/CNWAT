@@ -1,0 +1,76 @@
+.tree79,
+.tree79 ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 1rem; /*căn lề trái*/
+}
+
+.tree79 {
+    padding-left: .25rem;
+}
+
+.tree79 li {
+    position: relative;
+    margin: 4px 0;
+}
+
+.tree79 .icon {
+    margin-right: 4px;
+}
+
+.tree79 .label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.tree79 .label:hover {
+    background: #f2f2ff;
+}
+
+/* Nút + / − */
+.tree79 .toggle,
+.tree79 .toggle.placeholder { /*để các label thẳng hàng*/
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.1em;
+    text-align: center;
+    margin-right: 4px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-weight: 700;
+    background: #fff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.tree79 .toggle.placeholder {
+    visibility: hidden;
+    border-color: transparent;
+}
+
+/* Nhánh con + trạng thái đóng/mở */
+.tree79 .node>ul {
+    margin-left: 1.1rem;
+    padding-left: .8rem;
+    border-left: 1px dashed #cfcfcf;
+}
+
+.tree79 .node.collapsed>ul {
+    display: none;
+}
+
+/* Node đang chọn */
+.tree79 .node.selected>.label {
+    color: #673ab7;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Phần banner nhỏ cho main (khớp bố cục TH3) */
+.banner {
+    border: 1px dashed #bbb;
+    padding: 12px;
+    text-align: center;
+    color: #666;
+}

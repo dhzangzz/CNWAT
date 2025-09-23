@@ -1,0 +1,90 @@
+.form {
+    max-width: 760px;
+}
+
+/* Mỗi dòng: <label> | <input> + <span.err> */
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 8px 0;
+}
+
+.row label {
+    width: 180px;
+    flex: 0 0 180px;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.row .ctrl {
+    flex: 1;
+}
+
+.row input[type="text"],
+.row input[type="email"],
+.row input[type="password"],
+.row textarea,
+.row select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* Radio / checkbox hàng ngang */
+.row .radio,
+.row .checks {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.row .radio input,
+.row .checks input {
+    accent-color: var(--accent);
+}
+
+/* Ô bắt buộc: nền xanh nhạt */
+.required {
+    background: #e6fffb;
+}
+
+/* Span báo lỗi ngay sau input */
+.err {
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+/* Gợi ý “nn/tt/nnnn” màu xám */
+.ghost {
+    color: #9ca3af;
+}
+
+/* Chữ chú thích nhỏ */
+.muted {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Nút hành động */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #f7f7f7;
+}

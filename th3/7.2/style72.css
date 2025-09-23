@@ -1,0 +1,93 @@
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.toolbar select {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.quiz h3 {
+    margin: 10px 0 6px;
+}
+
+.q {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    margin: 10px 0;
+    background: #fff;
+}
+
+.q .qtext {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px;
+}
+
+.ans label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.ans input {
+    accent-color: var(--accent);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #f7f7f7;
+}
+
+.correct {
+    background: #ecfdf5;
+    border-color: #10b981;
+}
+
+/* xanh nhạt */
+.wrong {
+    background: #fff1f2;
+    border-color: #ef4444;
+}
+
+/* đỏ nhạt */
+.score {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 14px;
+}

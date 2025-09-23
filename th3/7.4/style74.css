@@ -1,0 +1,85 @@
+.f74 {
+    max-width: 880px
+}
+
+.f74 .row {
+    display: flex;
+    gap: 12px
+}
+
+.f74 .col {
+    flex: 1
+}
+
+.f74 .fg {
+    margin: 10px 0
+}
+
+.f74 label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px
+}
+
+.f74 input,
+.f74 textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px
+}
+
+.f74 textarea {
+    min-height: 64px;
+    resize: vertical
+}
+
+.f74 input.is-invalid,
+.f74 textarea.is-invalid {
+    border-color: #e53935;
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, .12)
+}
+
+.f74 .hint {
+    font-size: .9rem;
+    color: #666
+}
+
+.f74 .err {
+    font-size: .9rem;
+    color: #e53935;
+    min-height: 1.1em;
+    margin-top: 2px
+}
+
+.f74 .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px
+}
+
+.f74 .actions button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    cursor: pointer
+}
+
+.f74 .actions .primary {
+    background: #4caf50;
+    color: #fff;
+    border-color: #4caf50
+}
+
+.f74 .preview {
+    margin-top: 16px;
+    border: 1px dashed #bbb;
+    padding: 10px;
+    background: #fafafa
+}
+
+@media (max-width:840px) {
+    .f74 .row {
+        flex-direction: column
+    }
+}

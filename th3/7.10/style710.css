@@ -1,0 +1,73 @@
+.calc10 {
+    width: 320px;
+    margin: 16px auto;
+    padding: 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.calc10 .screen {
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    padding: 10px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.calc10 .screen .exp {
+    font-size: .9rem;
+    color: #666;
+    height: 18px;
+    line-height: 18px;
+}
+
+.calc10 .screen .curr {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+.calc10 .keys {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.calc10 button {
+    padding: 10px;
+    background: #eee;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.calc10 button.op {
+    background: #e9f0ff;
+}
+
+.calc10 button.equal {
+    background: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+}
+
+.calc10 button:active {
+    transform: translateY(1px);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width:420px) {
+    .calc10 {
+        width: 100%
+    }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>7.2 – Trắc nghiệm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/dauhuonggiang/css/style.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/th3.css">
+    <link rel="stylesheet" href="/dauhuonggiang/th3/7.2/style72.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/dauhuonggiang/">Trang chủ</a>
+            <a href="/dauhuonggiang/th2/">Thực hành 2</a>
+            <a class="active" href="/dauhuonggiang/th3/">Thực hành 3</a>
+            <a href="/dauhuonggiang/th4/">Thực hành 4</a>
+            <a href="/dauhuonggiang/th5/">Thực hành 5</a>
+            <a href="/dauhuonggiang/th6/">Thực hành 6</a>
+        </div>
+    </nav>
+
+    <div class="shell">
+        <div class="main">
+            <aside class="sidebar th-sidebar">
+                <div class="profile card">
+                    <img class="avatar" src="/dauhuonggiang/img/avatar.jpg" alt="Avatar">
+                    <div class="name">Đậu Hương Giang</div>
+                    <div class="msv">MSV: AT190216</div>
+                    <div class="school">Học viện Kĩ thuật mật mã</div>
+                </div>
+                <nav class="vnav">
+                    <a class="small" href="/dauhuonggiang/th3/7.1/index.html">Ví dụ JS</a>
+                    <a class="small active" href="/dauhuonggiang/th3/7.2/index.html">Trắc nghiệm</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.3/index.html">Lớp</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.4/index.html">Hồ sơ</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.5/index.html">Form nhập</a>
+                    <a class="small" href="/dauhuonggiang/th3/dsach.html">Danh sách</a>
+                    <a class="small" href="/dauhuonggiang/th3/thucdon.html">Thực đơn</a>
+                    <a class="small" href="/dauhuonggiang/th3/tab.html">Tabs</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.10/index.html">Máy tính</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.12/index.html">Sort & Search</a>
+                    <a class="small" href="/dauhuonggiang/th3/7.9/index.html">Cây</a>
+                </nav>
+            </aside>
+            <main class="content">
+                <div class="card quiz">
+                    <div
+                        style="display:flex; align-items:baseline; justify-content:space-between; gap:8px; flex-wrap:wrap;">
+                        <h2>Trắc nghiệm<span id="test-title">TEST 1</span></h2>
+                        <div class="toolbar">
+                            <label class="muted">Chọn bộ đề:</label>
+                            <select id="test-select" aria-label="Chọn bộ đề"></select>
+                        </div>
+                    </div>
+
+                    <form id="quiz-form"></form>
+
+                    <div class="actions">
+                        <button class="btn" id="submit-btn" type="button">Nộp bài</button>
+                        <button class="btn" id="reset-btn" type="button">Làm lại</button>
+                    </div>
+                    <div class="score" id="score-box"></div>
+                    <p class="muted">Có thể chuyển test khác bằng hộp chọn phía trên.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="footer">© 2025 • Đậu Hương Giang</div>
+
+    <script src="/dauhuonggiang/th3/th3.js?v=4" defer></script>
+    <script src="/dauhuonggiang/th3/7.2/quiz.js" defer></script>
+</body>
+
+</html>
