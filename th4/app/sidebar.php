@@ -7,12 +7,8 @@
     <div class="school">Học viện Kĩ thuật mật mã</div>
   </div>
 
-  <nav class="vnav" style="margin-top:12px">
-
-    <a href="/dauhuonggiang/th4/?page=landing">Trang chủ TH4</a>
-
+  <nav class="vnav th4-menu" style="margin-top:12px">
   <!-- 7.1 -->
-    <a class="<?= ($curSec==='7.1' && $curPage==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.1/?page=home">7.1 • Template</a>
     <a class="<?= ($curSec==='7.1' && $curPage==='login') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.1/?page=login">7.1 • Login</a>
 
   <!-- 7.2 -->

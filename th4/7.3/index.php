@@ -8,8 +8,8 @@ $allowed = [
   'calculate1'    => __DIR__.'/pages/calculate1.php',
   'calculate2'    => __DIR__.'/pages/calculate2.php',
   'array1'        => __DIR__.'/pages/array1.php',
-  'uploadform'    => __DIR__.'/pages/uploadform.php',
-  'uploadprocess' => __DIR__.'/pages/uploadprocess.php',
+  'uploadform'    => __DIR__.'/pages/uploads/uploadform.php',
+  'uploadprocess' => __DIR__.'/pages/uploads/uploadprocess.php',
 ];
 $PAGE = $_GET['page'] ?? 'home';
 $FILE = $allowed[$PAGE] ?? $allowed['home'];

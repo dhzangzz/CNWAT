@@ -359,3 +359,28 @@ body {
   
   /* Đề phòng rule nào đó từng ẩn .vnav */
   .sidebar .vnav, .sidebar .vnav *{ visibility: visible !important; }
+
+  /* Chỉ cuộn menu trong TH4 */
+.sidebar .th4-menu{
+    /* chiều cao tối đa: chỉnh con số cho vừa banner + profile của bạn */
+    max-height: calc(100vh - 340px);
+    overflow: auto;
+    padding-right: 4px;             /* chừa rãnh cho scrollbar */
+    overscroll-behavior: contain;   /* cuộn trong menu, không kéo cả trang */
+    scroll-behavior: smooth;
+  }
+  
+  /* Scrollbar đẹp (Chromium/Edge/Safari) */
+  .sidebar .th4-menu::-webkit-scrollbar{ width: 8px; }
+  .sidebar .th4-menu::-webkit-scrollbar-track{ background: transparent; }
+  .sidebar .th4-menu::-webkit-scrollbar-thumb{
+    background: #d1d5db; border-radius: 8px;
+  }
+  .sidebar .th4-menu::-webkit-scrollbar-thumb:hover{ background:#c5c9d1 }
+  
+  /* Scrollbar cho Firefox */
+  .sidebar .th4-menu{
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+  
