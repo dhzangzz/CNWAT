@@ -35,6 +35,9 @@
   <!-- 7.6 -->
     <a class="<?= ($curSec==='7.6' && $curPage==='user')  ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.6/?page=login">7.6 • Cookie (User)</a>
     <a class="<?= ($curSec==='7.6' && $curPage==='admin') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.6/admin/?page=home">7.6 • Cookie (Admin)</a>
+  <!-- 7.7 -->
+    <a class="<?= ($curSec==='7.7' && $curPage==='ar1') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.7/?page=ar1">7.7 • Mảng 1 chiều</a>
+    <a class="<?= ($curSec==='7.7' && $curPage==='matrix') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.7/?page=matrix">7.7 • Ma trận</a>
 
   </nav>
 </aside>
