@@ -32,7 +32,9 @@
   <!-- 7.5 -->
     <a class="<?= ($curSec==='7.5' && $curPage==='user')  ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.5/">7.5 • Session (User)</a>
     <a class="<?= ($curSec==='7.5' && $curPage==='admin') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.5/admin/">7.5 • Session (Admin)</a>
-
+  <!-- 7.6 -->
+    <a class="<?= ($curSec==='7.6' && $curPage==='user')  ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.6/?page=login">7.6 • Cookie (User)</a>
+    <a class="<?= ($curSec==='7.6' && $curPage==='admin') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.6/admin/?page=home">7.6 • Cookie (Admin)</a>
 
   </nav>
 </aside>
