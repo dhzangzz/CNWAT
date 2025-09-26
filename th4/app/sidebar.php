@@ -25,7 +25,14 @@
     <a class="<?= ($curSec==='7.3' && $curPage==='Array1') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.3/?page=array1">7.3 • Array1</a>
     <a class="<?= ($curSec==='7.3' && $curPage==='UploadForm') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.3/?page=uploadform">7.3 • UploadForm</a>
     <a class="<?= ($curSec==='7.3' && $curPage==='UploadProcess') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.3/?page=uploadprocess">7.3 • UploadProcess</a>
+  
+  <!-- 7.4 -->
     <a class="<?= ($SECTION==='7.4' && ($PAGE??'')==='form') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.4/?page=form">7.4 • GetForm</a>
+
+  <!-- 7.5 -->
+    <a class="<?= ($curSec==='7.5' && $curPage==='user')  ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.5/">7.5 • Session (User)</a>
+    <a class="<?= ($curSec==='7.5' && $curPage==='admin') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.5/admin/">7.5 • Session (Admin)</a>
+
 
   </nav>
 </aside>
