@@ -48,6 +48,9 @@
   <!-- 7.10 -->
     <a class="<?= ($SECTION==='7.10' && $PAGE==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.10/?page=home">7.10 • Home (Lang)</a>
     <a class="<?= ($SECTION==='7.10' && $PAGE==='contact') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.10/?page=contact">7.10 • Contact (Lang)</a>
+  <!-- 7.11 -->
+    <a class="<?= ($SECTION==='7.11' && str_starts_with($PAGE??'', 'lop_')) ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.11/?page=lop_list">7.11 • Lớp</a>
+    <a class="<?= ($SECTION==='7.11' && str_starts_with($PAGE??'', 'hoso_')) ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.11/?page=hoso_list">7.11 • Hồ sơ</a>
 
   </nav>
 </aside>
