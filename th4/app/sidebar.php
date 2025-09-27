@@ -45,5 +45,9 @@
     <a class="<?= ($curSec==='7.9' && $curPage==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.9/?page=home">7.9 • Home</a>
     <a class="<?= ($curSec==='7.9' && in_array($curPage, ['list','detail','edit','delete'], true)) ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.9/?page=list">7.9 • List</a>
     <a class="<?= ($curSec==='7.9' && $curPage==='add') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.9/?page=add">7.9 • Add</a>
+  <!-- 7.10 -->
+    <a class="<?= ($SECTION==='7.10' && $PAGE==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.10/?page=home">7.10 • Home (Lang)</a>
+    <a class="<?= ($SECTION==='7.10' && $PAGE==='contact') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.10/?page=contact">7.10 • Contact (Lang)</a>
+
   </nav>
 </aside>
