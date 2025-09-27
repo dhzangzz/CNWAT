@@ -38,6 +38,9 @@
   <!-- 7.7 -->
     <a class="<?= ($curSec==='7.7' && $curPage==='ar1') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.7/?page=ar1">7.7 • Mảng 1 chiều</a>
     <a class="<?= ($curSec==='7.7' && $curPage==='matrix') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.7/?page=matrix">7.7 • Ma trận</a>
+  <!-- 7.8 -->
+    <a class="<?= ($curSec==='7.8' && $PAGE==='listStudent') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.8/?page=listStudent">7.8 • listStudent</a>
+    <a class="<?= ($curSec==='7.8' && $PAGE==='addStudent') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.8/?page=addStudent">7.8 • addStudent</a>
 
   </nav>
 </aside>
