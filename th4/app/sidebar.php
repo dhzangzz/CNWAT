@@ -41,6 +41,9 @@
   <!-- 7.8 -->
     <a class="<?= ($curSec==='7.8' && $PAGE==='listStudent') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.8/?page=listStudent">7.8 • listStudent</a>
     <a class="<?= ($curSec==='7.8' && $PAGE==='addStudent') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.8/?page=addStudent">7.8 • addStudent</a>
-
+  <!-- 7.9 -->
+    <a class="<?= ($curSec==='7.9' && $curPage==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.9/?page=home">7.9 • Home</a>
+    <a class="<?= ($curSec==='7.9' && in_array($curPage, ['list','detail','edit','delete'], true)) ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.9/?page=list">7.9 • List</a>
+    <a class="<?= ($curSec==='7.9' && $curPage==='add') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.9/?page=add">7.9 • Add</a>
   </nav>
 </aside>
