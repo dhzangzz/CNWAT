@@ -1,5 +1,4 @@
 <?php
-// /dauhuonggiang/th4/7.5/pages/login.php
 session_start();
 $msg = '';
 $username = trim($_POST['username'] ?? '');
@@ -8,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     if ($username === 'admin' && $password === 'admin') {
         $_SESSION['Username'] = $username;
-        $_SESSION['Password'] = $password; // theo yêu cầu bài
+        $_SESSION['Password'] = $password; 
         header('Location: /dauhuonggiang/th4/7.5/admin/');
         exit;
     }

@@ -1,11 +1,12 @@
 <?php
 $csv = data_path('students.csv');
 
-// xử lý xoá theo chỉ số dòng (tùy chọn)
+//isset: kiem tra xem co ton tai hay khong
 if (isset($_POST['del'])) {
-    $idx = (int)($_POST['idx'] ?? -1);
+    $idx = (int)($_POST['idx'] ?? -1);//index tu input, ko co thi -1, chua vi tri cua dong can xoa
     $rows = csv_read($csv);
-    if (isset($rows[$idx])) { array_splice($rows,$idx,1); csv_write_all($csv,$rows); }
+    if (isset($rows[$idx])) { //index ton tai
+        array_splice($rows,$idx,1); csv_write_all($csv,$rows); }//xoa dong
     header('Location: ?page=listStudent'); exit;
 }
 

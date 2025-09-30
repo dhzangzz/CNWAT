@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         $f = $_FILES['file'];
         if ($f['size'] > 2*1024*1024) $msg = 'Tệp quá lớn (≤ 2MB).';
         else {
-        $ext  = strtolower(pathinfo($f['name'], PATHINFO_EXTENSION));
-        $name = 'up_'.date('Ymd_His').'_' . bin2hex(random_bytes(4)) . '.' . $ext;
-        $dest = $targetDir . '/' . $name;
+        $ext  = strtolower(pathinfo($f['name'], PATHINFO_EXTENSION));//lay phan mo rong
+        $name = 'up_'.date('Ymd_His').'_' . bin2hex(random_bytes(4)) . '.' . $ext;//tao ten file moi
+        $dest = $targetDir . '/' . $name;//duong dan
         if (move_uploaded_file($f['tmp_name'], $dest)) {
             $url = '/dauhuonggiang/th4/7.5/uploads/' . $name;     // URL xem tệp
         } else $msg = 'Không thể lưu tệp.';

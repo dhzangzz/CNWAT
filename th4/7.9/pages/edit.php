@@ -1,8 +1,10 @@
 <?php
-$id  = (int)($_GET['id'] ?? 0);
+$id  = (int)($_GET['id'] ?? 0);//id mac dinh
 $rows = read_all();
-$pos = -1; $sv=null;
-foreach($rows as $i=>$r) if ((int)$r[0]===$id){ $pos=$i; $sv=$r; break; }
+$pos = -1; //dong
+$sv=null;//noi dung dong do
+//duyet qua tung dong
+foreach($rows as $i=>$r) if ((int)$r[0]===$id){ $pos=$i; $sv=$r; break; }//luu dong & noi dung
 if($pos<0){ echo '<div class="card">Không tìm thấy.</div>'; return; }
 
 [$id,$name,$dob,$addr,$img,$class] = $sv;

@@ -1,20 +1,20 @@
 <?php
 $msg = '';
-if ($_SERVER['REQUEST_METHOD']==='POST') {
-    $name  = trim($_POST['name'] ?? '');
+if ($_SERVER['REQUEST_METHOD']==='POST') {//trim() loai bo khoang trang
+    $name  = trim($_POST['name'] ?? '');//lay gia tri tu input
     $dob   = trim($_POST['dob'] ?? '');
     $addr  = trim($_POST['addr'] ?? '');
     $class = trim($_POST['class'] ?? '');
-    $img   = handle_upload($_FILES['image'] ?? null); // có thể null
+    $img   = handle_upload($_FILES['image'] ?? null); //handle_upload: xu ly upload
 
-    if ($name==='' || $dob==='' || $class==='') {
+    if ($name==='' || $dob==='' || $class==='') {//validate
         $msg = 'Họ tên, ngày sinh, lớp là bắt buộc.';
     } else {
-        $rows = read_all();
-        $id   = next_id($rows);
+        $rows = read_all();//doc tu csv
+        $id   = next_id($rows);//tao moi id
         $rows[] = [$id,$name,$dob,$addr,$img ?? '',$class];
         write_all($rows);
-        header('Location: ?page=list'); exit;
+        header('Location: ?page=list'); exit;//chuyen huong ve list
     }
 }
 ?>
@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
     </nav>
 
     <h2>Thêm sinh viên mới</h2>
-    <?php if($msg): ?>
+    <?php if($msg): ?><!--thong bao loi-->
         <div style="background:#fee4e2;border:1px solid #fda29b;padding:8px 10px;border-radius:8px;margin-bottom:8px"><?= htmlspecialchars($msg) ?></div>
     <?php endif; ?>
-    <form method="post" enctype="multipart/form-data" style="display:grid;gap:10px">
+    <form method="post" enctype="multipart/form-data" style="display:grid;gap:10px"><!--multipart: upload file-->
         <label>Full name <input name="name" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px"></label>
         <label>Birthday <input name="dob" type="date" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px"></label>
         <label>Address <input name="addr" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px"></label>

@@ -1,15 +1,15 @@
 <?php
 require_once __DIR__.'/../models/LopModel.php';
-$rows = lop_all();
+$rows = lop_all();//lay all tu DB
 ?>
 <div class="card">
     <h3>Bảng LOP</h3>
     <p><a class="linkcard" href="?page=lop_add">+ Thêm lớp</a></p>
     <table class="table">
         <tr><th>MALOP</th><th>TENLOP</th><th>KHOAHOC</th><th>GVCN</th><th>Thao tác</th></tr>
-        <?php foreach($rows as $r): ?>
-        <tr>
-            <td><?= htmlspecialchars($r['MALOP']) ?></td>
+        <?php foreach($rows as $r): ?> 
+        <tr> 
+            <td><?= htmlspecialchars($r['MALOP']) ?></td> <!--chong xss-->
             <td><?= htmlspecialchars($r['TENLOP']) ?></td>
             <td><?= (int)$r['KHOAHOC'] ?></td>
             <td><?= htmlspecialchars($r['GVCN']) ?></td>

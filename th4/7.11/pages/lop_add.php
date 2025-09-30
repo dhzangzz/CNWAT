@@ -2,6 +2,7 @@
 require_once __DIR__.'/../models/LopModel.php';
 $msg = '';
 if ($_SERVER['REQUEST_METHOD']==='POST') {
+    //doc du lieu tu form
     $ok = lop_insert($_POST['malop'], $_POST['tenlop'], (int)$_POST['khoahoc'], $_POST['gvcn']);
     if ($ok) { header('Location: ?page=lop_list'); exit; }
     $msg = 'Thêm không thành công';

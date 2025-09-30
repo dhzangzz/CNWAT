@@ -1,6 +1,5 @@
 <?php
-// giữ giá trị đã nhập (sticky)
-$fullname = $_POST['fullname'] ?? '';
+$fullname = $_POST['fullname'] ?? '';//lay gia tri tu post, ko co->rong
 $email    = $_POST['email']    ?? '';
 $gender   = $_POST['gender']   ?? '';
 $major    = $_POST['major']    ?? '';
@@ -11,9 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $msg = 'Vui lòng nhập đủ thông tin.';
   } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $msg = 'Email không hợp lệ.';
-  } else {
-    // hợp lệ -> chuyển sang ResultRegister (dùng POST-redirect-POST là không cần)
-    // Ở 7.2 ta cho phép POST qua thẳng ResultRegister
+  } else {//hop le->chuyen sang ResultRegister
     ?>
     <form id="fwd" method="post" action="/dauhuonggiang/th4/7.2/?page=ResultRegister">
       <input type="hidden" name="fullname" value="<?= htmlspecialchars($fullname) ?>">

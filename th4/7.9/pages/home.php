@@ -8,5 +8,4 @@
     </nav>
 
     <h2>Quản lý sinh viên bằng file</h2>
-    <p>Review thao tác file + data flow: list, add, edit, detail, upload.</p>
 </div>

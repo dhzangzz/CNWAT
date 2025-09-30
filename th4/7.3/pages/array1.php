@@ -1,10 +1,9 @@
 <?php
-$size = 3;                  // 3x3 theo đề
-$show = ($_SERVER['REQUEST_METHOD']==='POST');  // chỉ hiện kết quả sau khi bấm Tính
+$size = 3; //3x3
+$show = ($_SERVER['REQUEST_METHOD']==='POST');//kqua sau khi an tinh
 
-// helper lấy giá trị ô
-function val($name,$i,$j,$def=''){
-  $key = "{$name}_{$i}_{$j}";
+function val($name,$i,$j,$def=''){//lay gia tri tu post
+  $key = "{$name}_{$i}_{$j}";//key: a_0_0
   return $_POST[$key] ?? $def;
 }
 ?>

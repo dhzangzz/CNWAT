@@ -3,18 +3,14 @@ if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 $SECTION = '7.10';
 $PAGE    = $_GET['page'] ?? 'home';
-
-/* Mặc định */
+//mac dinh la en
 if (empty($_SESSION['lang'])) $_SESSION['lang'] = 'en';
-
-/* Đổi ngôn ngữ qua GET */
+//url có lang=? thì cap nhat
 if (isset($_GET['lang'])) {
   $_SESSION['lang'] = ($_GET['lang'] === 'vi') ? 'vi' : 'en';
   header('Location: ?page='.urlencode($PAGE));
   exit;
 }
-
-/* CHUẨN HOÁ mọi giá trị cũ: english/vietnamese -> en/vi */
 $code = $_SESSION['lang'];
 $mapCodes = [
   'en' => 'en', 'english' => 'en',
@@ -23,15 +19,15 @@ $mapCodes = [
 $code = $mapCodes[$code] ?? 'en';
 $_SESSION['lang'] = $code;
 
-/* Nạp file ngôn ngữ dạng mảng */
+//duong dan toi file ngon ngu tuong ung
 $langFile = __DIR__ . '/lang/' . $code . '.php';
 if (!is_file($langFile)) {
-  // phòng khi thiếu file -> fallback về en
+  //thieu-> ve en
   $langFile = __DIR__ . '/lang/en.php';
 }
 $L = require $langFile;
 
-/* Router … (giữ nguyên như bạn đang có) */
+//anh xa cac trnag
 $map = [
   'home'    => __DIR__.'/pages/home.php',
   'contact' => __DIR__.'/pages/contact.php',

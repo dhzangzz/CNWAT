@@ -1,11 +1,10 @@
 <?php
-// Chuyển các ô form name="a_0_0" → mảng 2 chiều
-function readMatrix(string $prefix, int $n): array {
-    $m = [];
+function readMatrix(string $prefix, int $n): array {//prefix: ten mt, n: kthuoc
+    $m = [];//mang rong
     for($i=0;$i<$n;$i++){
         for($j=0;$j<$n;$j++){
-        $key = "{$prefix}_{$i}_{$j}";
-        $m[$i][$j] = isset($_POST[$key]) ? floatval($_POST[$key]) : 0;
+        $key = "{$prefix}_{$i}_{$j}";//key: a_0_0
+        $m[$i][$j] = isset($_POST[$key]) ? floatval($_POST[$key]) : 0;//lay gt tu postkey
         }
     }
     return $m;
@@ -29,7 +28,7 @@ function tinhMaTranTong(array $a, array $b){
     for($i=0;$i<$n;$i++) for($j=0;$j<$n;$j++) $c[$i][$j] = ($a[$i][$j] ?? 0) + ($b[$i][$j] ?? 0);
     return $c;
 }
-function tinhMaTranTich(array $a, array $b){            // tích chuẩn m×n • n×p (ở đây n×n)
+function tinhMaTranTich(array $a, array $b){  
     $n = count($a); $c=[];
     for($i=0;$i<$n;$i++){
         for($j=0;$j<$n;$j++){

@@ -1,5 +1,6 @@
 <?php
-$a = $_GET['a'] ?? ''; $b = $_GET['b'] ?? '';
+$a = $_GET['a'] ?? ''; 
+$b = $_GET['b'] ?? '';
 $op = $_GET['op'] ?? 'add';
 $result = null; $msg='';
 if ($a!=='' && ($op==='fact' || $b!=='')) {

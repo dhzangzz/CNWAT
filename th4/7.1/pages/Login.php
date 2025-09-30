@@ -1,30 +1,20 @@
 <?php
-// Bật session để lưu trạng thái đăng nhập
-if (session_status() === PHP_SESSION_NONE) session_start();
-
-// Tài khoản mẫu (hardcoded cho 7.1, chưa dùng DB)
+if (session_status() === PHP_SESSION_NONE) session_start();//bat session
 $users = [
-  'admin' => password_hash('123456', PASSWORD_DEFAULT), // mật khẩu: 123456
-  'giang' => password_hash('pass@2025', PASSWORD_DEFAULT),
+    'admin' => password_hash('123456', PASSWORD_DEFAULT), // mật khẩu: 123456
+    'giang' => password_hash('pass@2025', PASSWORD_DEFAULT),
 ];
-
-// Khởi tạo biến hiển thị
 $username = $_POST['username'] ?? '';
 $message  = '';
-
-// Xử lý POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $u = trim($_POST['username'] ?? '');
     $p = $_POST['password'] ?? '';
-
     if ($u === '' || $p === '') {
         $message = 'Vui lòng nhập đủ tên đăng nhập và mật khẩu.';
     } elseif (!isset($users[$u]) || !password_verify($p, $users[$u])) {
-        // So khớp sai
         $message = 'Tên đăng nhập hoặc mật khẩu không đúng.';
     } else {
-        // Thành công: lưu session và chuyển sang trang bí mật
-        $_SESSION['auth_user'] = $u;
+        $_SESSION['auth_user'] = $u;//luu session
         header('Location: /dauhuonggiang/th4/7.1/?page=secret');
         exit;
     }

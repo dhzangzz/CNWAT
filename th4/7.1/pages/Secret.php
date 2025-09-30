@@ -1,11 +1,11 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) session_start();
 if (empty($_SESSION['auth_user'])) {
-    // Chưa đăng nhập → đẩy về Login
+    //chua dang nhap->dung về Login
     header('Location: /dauhuonggiang/th4/7.1/?page=login');
     exit;
 }
-$user = $_SESSION['auth_user'];
+$user = $_SESSION['auth_user'];//lay gia tri tu session
 ?>
 <div class="card">
     <h2>Xin chào, <?= htmlspecialchars($user) ?>!</h2>

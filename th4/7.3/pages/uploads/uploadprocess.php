@@ -10,10 +10,10 @@ if (!isset($_FILES['file']) || $_FILES['file']['error']!==UPLOAD_ERR_OK) {
     if ($f['size'] > 2*1024*1024) {
         $msg = 'Tệp quá lớn (giới hạn 2MB).';
     } else {
-        $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = finfo_file($finfo, $f['tmp_name']);
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);//mo file info
+        $mime = finfo_file($finfo, $f['tmp_name']);//lay mime (loai file)
         finfo_close($finfo);
-        $ok = in_array($mime, ['image/jpeg','image/png','image/gif'], true);
+        $ok = in_array($mime, ['image/jpeg','image/png','image/gif'], true);//ktra 
         if (!$ok) $msg = 'Chỉ cho phép ảnh JPEG/PNG/GIF.';
         else {
         $ext = pathinfo($f['name'], PATHINFO_EXTENSION);

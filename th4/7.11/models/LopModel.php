@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__.'/../db.php';
-
+//toàn bộ lớp
 function lop_all() {
     return pdo()->query("SELECT * FROM LOP ORDER BY MALOP")->fetchAll();
 }

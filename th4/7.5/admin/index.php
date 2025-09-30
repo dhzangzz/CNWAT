@@ -1,5 +1,4 @@
 <?php
-// Admin chạy qua layout của TH4
 session_start();
 
 $SECTION = '7.5';
@@ -17,11 +16,8 @@ $map     = [
   'denied' => $base.'denied.php',
 ];
 
-// Nếu CHƯA đăng nhập thì chỉ cho vào trang denied (trừ khi gọi logout)
-if (!$logged && $view !== 'logout') $view = 'denied';
+if (!$logged && $view !== 'logout') $view = 'denied';//neu chua dang nhap va khong goi logout thi chuyen denied
 
 $FILE = $map[$view] ?? $map['home'];
-
-// gọi layout chung của TH4
 $TH4_ROOT = dirname(__DIR__, 2);            // .../th4
 require $TH4_ROOT . '/app/layout.php';

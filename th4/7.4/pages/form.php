@@ -1,14 +1,12 @@
 <?php
-// giữ lại giá trị khi quay lại form (từ GET)
-$init = [
-  'txtHoTen'     => $_GET['txtHoTen']     ?? '',
+$init = [//khoi tao gia tri
+  'txtHoTen'     => $_GET['txtHoTen']     ?? '',//lay gia tri tu get, ko co->rong
   'txtGioiThieu' => $_GET['txtGioiThieu'] ?? '',
   'txtTaiKhoan'  => $_GET['txtTaiKhoan']  ?? '',
   'txtMatKhau'   => $_GET['txtMatKhau']   ?? '',
   'rdGioiTinh'   => $_GET['rdGioiTinh']   ?? '',
-  'chkDongY'     => isset($_GET['chkDongY']) ? '1' : '',
+  'chkDongY'     => isset($_GET['chkDongY']) ? '1' : '',//neu co->1, ko co->rong
   'cboNghe'      => $_GET['cboNghe']      ?? '',
-  // Skill bây giờ là checkbox list:
   'chkKyNang'    => $_GET['chkKyNang']    ?? [],    // <-- array
 ];
 ?>
@@ -35,7 +33,7 @@ $init = [
         <legend>Giới tính:</legend>
         <?php foreach(['Nữ','Nam','Khác'] as $g): ?>
             <label style="margin-right:12px">
-            <input type="radio" name="rdGioiTinh" value="<?= $g ?>" <?= $init['rdGioiTinh']===$g?'checked':'' ?>> <?= $g ?>
+            <input type="radio" name="rdGioiTinh" value="<?= $g ?>" <?= $init['rdGioiTinh']===$g?'checked':'' ?>> <?= $g ?><!--checked: neu gioi tinh=g-->
             </label>
         <?php endforeach; ?>
         </fieldset>

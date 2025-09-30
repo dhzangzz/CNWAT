@@ -34,7 +34,7 @@ $volume = 4/3 * M_PI * $r * $r * $r;   // V = 4/3 πr³
 
 <div class="card">
     <div class="hello-track">
-        <span class="hello">Hello 👋</span>
+        <span class="hello">Hello</span>
     </div>
 </div>
 
@@ -50,22 +50,21 @@ $volume = 4/3 * M_PI * $r * $r * $r;   // V = 4/3 πr³
     margin-top: 8px;
 }
 
-/* Dòng chữ chạy qua lại bằng CSS animation */
 .hello{
     position: absolute;
     top: 50%;
-    left: -120px;                   /* xuất phát hơi ngoài mép trái */
+    left: -120px;/*chay tu trai*/
     transform: translateY(-50%);
     font-weight: 700;
     padding: 6px 10px;
     border-radius: 8px;
     background: #fff7e0;
-    border: 1px solid #f59e0b;
+    border: 1px solidrgb(239, 204, 142);
     animation: hello-run 4s linear infinite alternate;
 }
 
 @keyframes hello-run{
     from { left: -120px; }
-    to   { left: calc(100% - 60px); }   /* chạy tới gần mép phải */
+    to   { left: calc(100% - 60px); }/* chay toi phai */
 }
 </style>

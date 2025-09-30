@@ -1,20 +1,17 @@
 <?php
-// Cookie helpers
-function read_links(): array {
+//Cookie helpers
+function read_links(): array {//lay danh sach link tu cookie
   $json = $_COOKIE['fav_links'] ?? '[]';
-  $data = json_decode($json, true);
-  return is_array($data) ? $data : [];
+  $data = json_decode($json, true);//chuyen tu json sang mang
+  return is_array($data) ? $data : [];//tra ve mang
 }
-function write_links(array $arr): void {
-  $json = json_encode($arr, JSON_UNESCAPED_UNICODE);
-  // sống 30 ngày, path toàn site để End user cũng có thể đọc nếu muốn
-  setcookie('fav_links', $json, time()+30*24*3600, '/');
+function write_links(array $arr): void {//luu danh sach link vao cookie
+  $json = json_encode($arr, JSON_UNESCAPED_UNICODE);//mang->json
+  setcookie('fav_links', $json, time()+30*24*3600, '/');//tao cookie(30ngay)
 }
-
-// xử lý thêm/xoá/clear
 $links = read_links();
 if ($_SERVER['REQUEST_METHOD']==='POST') {
-    if (isset($_POST['add'])) {
+    if (isset($_POST['add'])) {//them link
         $title = trim($_POST['title'] ?? '');
         $url   = trim($_POST['url'] ?? '');
         if ($title!=='' && filter_var($url, FILTER_VALIDATE_URL)) {
@@ -24,15 +21,15 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         }
         $err = 'Tiêu đề trống hoặc URL không hợp lệ.';
     }
-    if (isset($_POST['del'])) {
-        $idx = (int)($_POST['idx'] ?? -1);
-        if (isset($links[$idx])) {
+    if (isset($_POST['del'])) {//xoa
+        $idx = (int)($_POST['idx'] ?? -1);//index cua link can xoa
+        if (isset($links[$idx])) {//tontai
         array_splice($links, $idx, 1);
         write_links($links);
         }
         header('Location: ?page=links'); exit;
     }
-    if (isset($_POST['clear'])) {
+    if (isset($_POST['clear'])) {//xoaall
         $links = [];
         write_links($links);
         header('Location: ?page=links'); exit;

@@ -5,8 +5,8 @@ $row = lop_get($malop);
 if (!$row) { echo "<div class=card>Không tìm thấy lớp</div>"; return; }
 
 if ($_SERVER['REQUEST_METHOD']==='POST') {
-    lop_update($malop, $_POST['tenlop'], (int)$_POST['khoahoc'], $_POST['gvcn']);
-    header('Location: ?page=lop_list'); exit;
+    lop_update($malop, $_POST['tenlop'], (int)$_POST['khoahoc'], $_POST['gvcn']); //cap nhat ma lop co dinh
+    header('Location: ?page=lop_list'); exit;//tro ve danh sach
 }
 ?>
 <div class="card" style="max-width:560px">

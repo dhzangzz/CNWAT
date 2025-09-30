@@ -37,7 +37,7 @@ if ($action==='rev')  $list   = daoNguocDay($a);
         <p><b><?= htmlspecialchars($action) ?>:</b> <?= $result ?></p>
         <?php endif; ?>
         <?php if ($list!==null): ?>
-        <p><b>Mảng:</b> <?= implode(', ', $list) ?></p>
+        <p><b>Mảng:</b> <?= implode(', ', $list) ?></p><!--noi mang thanh chuoi, cach nhau boi dau ,-->
         <?php endif; ?>
     </div>
 <?php endif; ?>
