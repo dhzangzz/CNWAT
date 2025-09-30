@@ -1,6 +1,3 @@
-/* /dauhuonggiang/th3/7.2/quiz.js */
-
-// ===== 1) Dữ liệu đề (bạn thêm/sửa thoải mái) =====
 const TESTS = {
     t1: {
         title: 'TEST 1',
