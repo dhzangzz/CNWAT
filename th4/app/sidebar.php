@@ -51,6 +51,10 @@
   <!-- 7.11 -->
     <a class="<?= ($SECTION==='7.11' && str_starts_with($PAGE??'', 'lop_')) ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.11/?page=lop_list">7.11 • Lớp</a>
     <a class="<?= ($SECTION==='7.11' && str_starts_with($PAGE??'', 'hoso_')) ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.11/?page=hoso_list">7.11 • Hồ sơ</a>
-
+  <!-- 7.12 -->
+    <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=home">7.12 • Home</a>
+    <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='listClass1') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=listClass1">7.12 • ListClass (Cách 1)</a>
+    <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='listClass2') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=listClass2">7.12 • ListClass (Cách 2)</a>
+    <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='listClass3') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=listClass3">7.12 • ListClass (Cách 3)</a>
   </nav>
 </aside>
