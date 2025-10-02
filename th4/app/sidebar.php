@@ -56,5 +56,8 @@
     <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='listClass1') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=listClass1">7.12 • ListClass (Cách 1)</a>
     <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='listClass2') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=listClass2">7.12 • ListClass (Cách 2)</a>
     <a class="<?= ($SECTION==='7.12' && ($PAGE??'')==='listClass3') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.12/?page=listClass3">7.12 • ListClass (Cách 3)</a>
+  <!-- 7.13 -->
+    <a class="<?= ($SECTION==='7.13' && ($PAGE??'')==='home') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.13/?page=home">7.13 • Home (Laptop)</a>
+    <a class="<?= ($SECTION==='7.13' && ($PAGE??'')==='productList') ? 'active' : '' ?>" href="/dauhuonggiang/th4/7.13/?page=productList">7.13 • Product List</a>
   </nav>
 </aside>
