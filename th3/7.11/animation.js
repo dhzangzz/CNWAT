@@ -1,6 +1,6 @@
 let dongHo = null;
-let khungHienTai = 0;
-let huong = 1;
+let khungHienTai = 0;//chi so anh
+let huong = 1;//1=tien,-1=lui
 
 const danhSachHinh = [
     'images/stand.jpg',
@@ -8,21 +8,21 @@ const danhSachHinh = [
     'images/jump2.jpg',
     'images/jump3.jpg'
 ];
-
+//tham chieu toi anh, nut bam
 const anhNhanVat = document.getElementById('stickFigure');
 const nutNhay = document.getElementById('jumpBtn');
 const nutDung = document.getElementById('stopBtn');
 
 function batDauAnimation() {
     if (dongHo) {
-        return;
+        return;//neu dang chay thi ko lam j
     }
     
-    nutNhay.disabled = true;
+    nutNhay.disabled = true;//vo hieu hoa nut nhay
     nutDung.disabled = false;
     
-    dongHo = setInterval(() => {
-        anhNhanVat.src = danhSachHinh[khungHienTai];
+    dongHo = setInterval(() => {//tao dong ho
+        anhNhanVat.src = danhSachHinh[khungHienTai];//gan anh
         khungHienTai += huong;
         
         if (khungHienTai >= danhSachHinh.length) {
@@ -32,12 +32,12 @@ function batDauAnimation() {
             khungHienTai = 1;
             huong = 1;
         }
-    }, 200);
+    }, 200);//0.2s
 }
 
 function dungAnimation() {
     if (dongHo) {
-        clearInterval(dongHo);
+        clearInterval(dongHo);//dung dong ho
         dongHo = null;
         khungHienTai = 0;
         huong = 1;
