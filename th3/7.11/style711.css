@@ -1,0 +1,72 @@
+h1 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.animation-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#jumpBtn {
+    background: #28a745;
+    color: white;
+}
+
+#stopBtn {
+    background: #dc3545;
+    color: white;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.stick-figure-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+}
+
+#stickFigure {
+    max-width: 200px;
+    max-height: 250px;
+}
+
+.description {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.description p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
