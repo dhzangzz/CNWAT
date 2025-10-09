@@ -3,11 +3,14 @@ global $L, $PAGE;
 ?>
 <div class="card" style="max-width:700px">
     <div class="subnav">
-        <a href="?page=<?= htmlspecialchars($PAGE) ?>&lang=vi"><?= $L['VIETNAMESE'] ?></a>
-        <a href="?page=<?= htmlspecialchars($PAGE) ?>&lang=en"><?= $L['ENGLISH'] ?></a>
-
-        <a class="<?= ($PAGE==='home')?'active':'' ?>" href="?page=home"><?= $L['HOME'] ?></a>
-        <a class="<?= ($PAGE==='contact')?'active':'' ?>" href="?page=contact"><?= $L['CONTACT'] ?></a>
+        <div class="subnav-left">
+            <a class="<?= ($PAGE==='home')?'active':'' ?>" href="?page=home"><?= $L['HOME'] ?></a>
+            <a class="<?= ($PAGE==='contact')?'active':'' ?>" href="?page=contact"><?= $L['CONTACT'] ?></a>
+        </div>
+        <div class="subnav-right">
+            <a href="?page=<?= htmlspecialchars($PAGE) ?>&lang=vi"><?= $L['VIETNAMESE'] ?></a>
+            <a href="?page=<?= htmlspecialchars($PAGE) ?>&lang=en"><?= $L['ENGLISH'] ?></a>
+        </div>
     </div>
 
     <h3><?= $L['CONTACT_FORM'] ?></h3>

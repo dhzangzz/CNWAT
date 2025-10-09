@@ -386,7 +386,10 @@ body {
 
 /* --- Subnav 7.9 --- */
 .subnav{
-    display:flex; gap:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
     background:#fff;
     border:1px solid var(--border);
     border-radius:12px;
@@ -394,6 +397,7 @@ body {
     margin:0 0 14px;
     box-shadow:0 2px 10px rgba(0,0,0,.04);
   }
+  .subnav-left, .subnav-right{ display:flex; gap:10px; }
   
   /* Chặn màu tím + gạch chân của link đã click */
   .subnav a,
